@@ -1,0 +1,504 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+    scroll-behavior: smooth;
+}
+body{
+    background: #000;
+}
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 12vh;
+    background: #000;
+    width: 100vw;
+    transition: 0.5s ease-out;
+    z-index:1;
+  }
+  .logo{
+    color:#fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+  }
+  .nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+  }
+  .nav-links li{
+    list-style: none;
+  }
+  .nav-links  a{
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .burger{
+    display: none;
+    cursor: pointer;
+  }
+  .burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226,226,226);
+    margin: 5px;
+    transition: all 0.3s ease ;
+  }
+  
+  @media screen and (max-width:1024px) {
+  .nav-links{
+    width:60%;
+  }
+  
+}
+  
+  @media screen and (max-width:600px) {
+    body{
+      overflow-x: hidden;
+    }
+  
+  .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgb(2, 2, 2);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition:transform 0.5s ease-in;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  
+  .burger{
+  display:block;
+  }
+
+  .nav-active{
+    transform: translateX(0%);
+  }
+  
+  @keyframes navLinksFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity:1;
+    transform: translateX(0px);
+  }
+  }
+  
+  .toggle .line1{
+      transform:  rotate(-45deg) translate(-5px , 6px);
+  }
+  
+  
+  .toggle .line2{
+    opacity: 0;
+  }
+  
+  
+  .toggle .line3{
+      transform:  rotate(45deg) translate(-5px , -6px);
+  }
+
+}
+
+.js-reveal {
+  opacity: 1;
+  transition: opacity .7s ease-in, margin-top .7s ease-out;
+}
+
+.js-reveal--hidden {
+  opacity: 0;
+  margin-top: 3em;
+}
+::-webkit-scrollbar{
+  width:8px;
+}
+::-webkit-scrollbar-thumb{
+  background:#666;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background:rgb(255, 255, 255);
+}
+.welcome-box{
+  width: 100%;
+  height: 100vh;
+  padding:100px ;
+  z-index: 0;
+}
+._Hi{
+  color: #666;
+  font-size: 3em;
+  height: 110px;
+  width: 350px;
+}
+._Hi span{
+  padding: 10px;
+}
+._lorem{
+  font-size: 22px;
+  margin-top: 20px;
+  color: #666;
+  height: 70%;
+  width: 400px;
+}
+._lorem p{
+  padding: 8px;
+}
+._scroll-i{
+  height: 50px;
+  width: 300px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+._scroll-i h2{
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.about-box{
+  background: #fff;
+  transform: skewY(-181deg);
+  width: 100%;
+  height: 100vh;
+  color: rgb(2, 2, 2);
+  padding:100px;
+}
+._whoiam{
+  color: rgb(0, 0, 0);
+  font-size: 3em;
+  text-align: center;
+}
+._info{
+  font-size:22px;
+  color: rgb(0, 0, 0);
+  height: 70%;
+  width: 400px;
+  margin: 30px;
+}
+._info p{
+  margin-top: 20px;
+}
+._info img{
+  width: 150px;
+  height: 150px; 
+  border-radius: 100px;
+}
+._contact{
+justify-content: space-between;
+display: flex;
+align-items: center;
+margin: 80px;
+text-decoration: none;
+}
+._contact  svg{
+  width: 30px;
+  height: 30px;
+  transition: .7s .5s ease;
+}
+._contact svg:hover{
+ transform: scale(1.2);
+}
+.retour svg{
+  height: 40px;
+  width: 40px;
+  padding: 10px;  
+  background-color:rgb(194, 193, 193);
+  border-radius: 100%;
+  position:fixed;
+  left: 90%;
+  top:90%;
+}
+.skill{
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+}
+.div-top{
+  color: white;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 12px;
+}
+.skills-row { 
+  margin-top: 50px; 
+}
+
+.skill-item { 
+  border-bottom: 1px solid rgba(250, 250, 250, 0.1); 
+  margin-bottom: 50px; 
+  padding-bottom: 50px; 
+}
+
+.last-skill { 
+  border-bottom: none; 
+}
+
+.skills-row span { 
+  display: inline-block; 
+  width: 50px; 
+  height: 50px; 
+  text-align: center; 
+  line-height: 50px; 
+  background-color: #fff;
+  color: rgb(30, 30, 30); 
+  border-radius: 50%; 
+  font-size: 16px; 
+  font-weight: 700; 
+  left: 0px; 
+  top: -21px; 
+  position: absolute; 
+  z-index: 999; }
+
+.skills-row h6 { font-size: 16px; 
+  text-transform: uppercase; 
+  font-weight: 700; 
+  color: #fff;
+  text-align: right; 
+  margin-bottom: -10px; 
+}
+
+.skill-bar { 
+  width: 70%; 
+  height: 6px; 
+  border-radius: 3px; 
+  background-color: rgba(250, 250, 250, 0.25); 
+  position: relative; 
+}
+
+.filled-bar { 
+  position: absolute; 
+  z-index: 99; 
+  width: 64%; 
+  height: 6px; 
+  background-color: rgb(255, 255, 255); 
+  border-radius: 3px; 
+}
+.filled-bar-2 { position: absolute; 
+  z-index: 99; 
+  width: 60%; 
+  height: 6px; 
+  background-color: rgb(255, 255, 255); 
+  border-radius: 3px; 
+}
+.filled-bar-3 { 
+  position: absolute; 
+  z-index: 99; 
+  width: 50%; 
+  height: 6px; 
+  background-color: rgb(255, 255, 255); 
+  border-radius: 3px; 
+}
+.filled-bar-4 { 
+  position: absolute; 
+  z-index: 99; 
+  width: 75%; 
+  height: 6px; 
+  background-color: rgb(255, 255, 255); 
+  border-radius: 3px; 
+}
+
+.comment{
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.form-box{
+  background: rgb(250, 250, 250);
+  border-radius: 5px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin: 10px;
+  width: 70%;
+  height: 800x;
+  padding: 10px;
+}
+.form-box label{
+  color: #666;
+  display: block;
+  position: relative;
+  left: 40px;
+}
+.form-box input , textarea{
+  border: 1px solid rgb(0, 0, 0);
+  position: relative;
+  padding: 10px 0 10px 0;
+  left: 18px;
+  width: 90%;
+  margin: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-box [type="submit"]{
+  background-color:#000;
+  color: white;
+}
+._work{
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  padding: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+}
+
+._work-img{
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+._work-info{
+  margin: 10px;
+  background: rgb(255, 255, 255);
+  color: rgb(37, 37, 37);
+}
+.post-view{
+  padding:5px;
+}
+ @media screen and (max-width:500px){
+  ._Hi{
+    font-size: 2em;
+    height: 100px;
+    width: 350px;
+  }
+  ._Hi span{
+    padding: 6px;
+  }
+  ._lorem{
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  ._lorem p{
+    padding:6px;
+  }
+  ._scroll-i{
+    height: 100px;
+    width: 300px;
+ 
+  }
+  ._scroll-i h2{
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+  }
+  ._whoiam{
+    color: rgb(0, 0, 0);
+    font-size: 2.5em;
+    text-align: center;
+  }
+  ._info{
+    font-size:22px;
+    color: rgb(0, 0, 0);
+    height: 70%;
+    width: 300px;
+    margin: 30px;
+  }
+  ._info p{
+    margin-top: 20px;
+  }
+  ._info img{
+    width: 100px;
+    height: 100px; 
+    border-radius: 100px;
+  }
+  .div-top{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  ._contact{
+    margin: 70px;
+    text-decoration: none;
+  } 
+  
+  .skill-item {
+	  border-bottom: 1px solid rgba(250,250,250,0.1);
+	  margin-bottom: 40px;
+	  padding-bottom: 30px;
+	}
+	.skill-bar {
+	  width: 65%;
+	  height: 6px;
+	  border-radius: 3px;
+	  background-color: rgba(250,250,250,0.25);
+	  position: relative;
+	}
+  .skills-row h6 {
+    font-size: 0.8em;
+	}
+
+  .form-box{
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 300px;
+  }
+  .form-box label{
+    color: #666;
+    display: block;
+    position: relative;
+    left: 40px;
+  }
+  .form-box input , textarea{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px 0 10px 0;
+    width: 100%;
+    margin: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .form-box [type="submit"]{
+    background-color:#000;
+    color: white;
+  }
+  ._work{
+    width: 100%;
+    height: 500px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+  }
+  
+  ._work-img{
+    border: 1px solid #fff;
+    width: 100px;
+    height: 100px;
+  }
+  ._work-info{
+    margin: 8px;
+    background: rgb(255, 255, 255);
+    color: rgb(37, 37, 37);
+    font-size: 0.5em;
+  }
+ }
